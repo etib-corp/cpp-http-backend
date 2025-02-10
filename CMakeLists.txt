@@ -20,6 +20,8 @@ FetchContent_Declare(httplib SYSTEM
     GIT_SHALLOW TRUE)
 FetchContent_MakeAvailable(httplib)
 
+include_directories(${httplib_SOURCE_DIR})
+
 # Add the server library as a shared library
 add_library(etib-http-server SHARED ${SERVER_SOURCES})
 
